@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: 0 9 1 * *
 
+permissions:
+  contents: write
+
 jobs:
   renew:
     name: Renew
@@ -19,15 +22,6 @@ jobs:
           wget "https://www.ip2location.com/download/?token=${{ secrets.IP2LOCATION_TOKEN }}&file=DB11LITEBIN" -O ./IP2LOCATION-LITE-DB11.BIN.ZIP
           wget "https://www.ip2location.com/download/?token=${{ secrets.IP2LOCATION_TOKEN }}&file=DB11LITEBINIPV6" -O ./IP2LOCATION-LITE-DB11.IPV6.BIN.ZIP
 
-      - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Renew Database
-          commit_user_name: github-actions[bot]
-          commit_user_email: github-actions[bot]@renfei.net
-          commit_author: github-actions[bot] <github-actions[bot]@renfei.net>
-          tagging_message: ${{ env.NOW }}
-
       - name: Unzip
         run: |
           mkdir ./BIN
@@ -37,7 +31,9 @@ jobs:
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: ${{ secrets.YOURTOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: ${{ env.NOW }}
           prerelease: false
           title: ${{ env.NOW }}
+          files: |
+            ./BIN/*.BIN
