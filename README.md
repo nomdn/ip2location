@@ -18,11 +18,6 @@ Database bin file:
 
 - [Releases](https://github.com/renfei/ip2location/releases)
 
-Or download the zip file in the warehouse and decompress it by yourself.
-
-- [IP2LOCATION-LITE-DB11.BIN.ZIP](./IP2LOCATION-LITE-DB11.BIN.ZIP)
-- [IP2LOCATION-LITE-DB11.IPV6.BIN.ZIP](./IP2LOCATION-LITE-DB11.IPV6.BIN.ZIP)
-
 ## Installing in maven
 
 ```xml

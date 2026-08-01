@@ -18,11 +18,6 @@
 
 - [Releases](https://github.com/renfei/ip2location/releases)
 
-或者下载仓库中 ZIP 文件自行解压。
-
-- [IP2LOCATION-LITE-DB11.BIN.ZIP](./IP2LOCATION-LITE-DB11.BIN.ZIP)
-- [IP2LOCATION-LITE-DB11.IPV6.BIN.ZIP](./IP2LOCATION-LITE-DB11.IPV6.BIN.ZIP)
-
 ## 使用 Maven 安装客户端
 
 ```xml
