@@ -4,7 +4,7 @@
 
 > This site or product includes IP2Location LITE data available from http://www.ip2location.com
 
-# IP2Location for Java
+# IP2Location
 
 The repository code is based on [ip2location renfei repository](https://github.com/renfei/ip2location).
 
