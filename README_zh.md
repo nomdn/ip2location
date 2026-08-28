@@ -4,7 +4,7 @@
 
 > 此网站或产品包含IP2Location LITE数据，可从 http://www.ip2location.com 获取
 
-# IP2Location Java 客户端
+# IP2Location
 
 此代码仓库基于 [ip2location renfei repository](https://github.com/renfei/ip2location)。
 
