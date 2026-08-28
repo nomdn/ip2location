@@ -50,3 +50,4 @@ jobs:
           files: |
             ./BIN/*.BIN
             *.zip
+            *.ZIP
