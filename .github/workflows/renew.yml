@@ -24,6 +24,8 @@ jobs:
           wget "https://www.ip2location.com/download/?token=${{ secrets.IP2LOCATION_TOKEN }}&file=DB5LITEBIN" -O ./IP2LOCATION-LITE-DB5.BIN.ZIP
           wget "https://www.ip2location.com/download/?token=${{ secrets.IP2LOCATION_TOKEN }}&file=DB5LITEBINIPV6" -O ./IP2LOCATION-LITE-DB5.IPV6.BIN.ZIP
           wget "https://www.ip2location.com/download/?token=${{ secrets.IP2LOCATION_TOKEN }}&file=PX12LITEBIN" -O ./IP2PROXY-LITE-PX12.BIN.zip
+          wget "https://www.ip2location.com/download/?token=${{ secrets.IP2LOCATION_TOKEN }}&file=DBASNLITEBIN" -O ./IP2LOCATION-LITE-ASN.BIN.zip
+          wget "https://www.ip2location.com/download/?token=${{ secrets.IP2LOCATION_TOKEN }}&file=DBASNLITEBINIPV6" -O ./IP2LOCATION-LITE-ASN.IPV6.BIN.zip
           
           
           
@@ -36,6 +38,7 @@ jobs:
           unzip -o IP2PROXY-LITE-PX12.BIN.zip -d ./BIN
           unzip -o IP2LOCATION-LITE-DB5.BIN.ZIP -d ./BIN
           unzip -o IP2LOCATION-LITE-DB5.IPV6.BIN.ZIP -d ./BIN
+          
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
@@ -46,3 +49,4 @@ jobs:
           title: ${{ env.NOW }}
           files: |
             ./BIN/*.BIN
+            *.zip
